@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 {% block content %}
 
+</div>
+
 <body>
 
 
-  <a href="{% url 'pjt1:review' %}">리뷰 작성</a>
-  
   <table class="table">
     <thead class="table-dark">
       <tr>
@@ -15,7 +15,7 @@
       </tr>
     </thead>
 
-  {% for review in reviews %}
+    {% for review in reviews %}
 
     <tbody>
       <tr>
@@ -28,12 +28,24 @@
     </tbody>
     {% endfor %}
   </table>
-  
 
 
+  <div class="text-end ">
+
+    <a class="btn btn-primary" href="{% url 'pjt1:review' %}">리뷰 작성</a>
+
+  </div>
 
 
+  <div style="height:500px ;"></div>
 
+
+  <footer class="bg-dark text-white text-center fixed-bottom">
+    <h2>
+      2022-09-30 Django 페어 프로젝트 01 이성훈,이동현
+    </h2>
+
+  </footer>
 
 </body>
 
