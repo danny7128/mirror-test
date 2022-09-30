@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<body>
+
+  <h1>제목 : {{ content.title }}</h1><br>
+  {{ content.content }}<br>
+  <a href="{% url 'pjt1:edit' content.pk %}">리뷰수정</a>
+  <a href="{% url 'pjt1:delete' content.pk %}">리뷰삭제</a>
+
+
+
+
+</body>
+
+{% endblock %}
