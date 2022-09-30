@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<body>
+  <a href="{% url 'pjt1:review' %}">리뷰 작성</a>
+  {% for review in reviews %}
+
+  <p>
+
+    {{ review.title }}
+    {{ review.content }}
+  </p>
+  {% endfor %}
+
+
+
+
+</body>
+
+{% endblock %}
